@@ -15,4 +15,4 @@ quote = "1.0.40"
 ai_functions = "0.1.1"
 
 [dev-dependencies]
-my_proc_macro = { path = "../my_proc_macro" }
+my_proc_macro = { path = "my_proc_macro" }

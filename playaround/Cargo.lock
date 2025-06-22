@@ -2010,6 +2010,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "my_proc_macro"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.104",
+]
+
+[[package]]
 name = "native-tls"
 version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2409,6 +2418,7 @@ dependencies = [
  "ai_functions",
  "base64ct",
  "ethers",
+ "my_proc_macro",
  "quote",
  "reqwest 0.12.20",
  "serde_json",
