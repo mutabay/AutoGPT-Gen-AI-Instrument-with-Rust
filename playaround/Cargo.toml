@@ -1,7 +1,18 @@
 [package]
 name = "playground"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
 
 [dependencies]
 ethers = "2.0.4"
+base64ct = "<1.8.0"
+reqwest = { version = "0.12.20", features = ["json"] }
+serde_json = "1.0.140"
+tokio = {version = "1.45.1", features = ["rt-multi-thread", "macros"]}
+syn = "2.0.104"
+quote = "1.0.40"
+ai_functions = "0.1.1"
+
+[dev-dependencies]
+my_proc_macro = { path = "../my_proc_macro" }

@@ -70,7 +70,7 @@ mod tests {
         let some_res: Result<i32, &str> = Ok(50);
         let some_err: Result<i32, &str> = Err("Thre was a problem");
 
-        let res = match some_err {
+        let res = match some_res {
             Ok(val) => val,
             Err(e) => panic!("{}", e),
         };
@@ -93,5 +93,32 @@ mod tests {
         let my_move: Message = Message::Move { x: 10, y: 200 };
         let my_write: Message = Message::Write("Wasssuuup!!".to_string());
         process_message(my_write);
+    }
+
+    #[test]
+    fn test_match_guard() {
+        let pair = (2, -2);
+        match pair {
+            (x, y) if x == y => println!("They match: {} and {}", x, y),
+            (x, y) if x + y == 0 => println!("They are opposites: {} and {}", x, y),
+            (_, y) if y == 2 => println!("The second value is 2: {}", y),
+            _ => println!("We are not sure what this is!")
+        };
+    }
+
+    #[test]
+    fn test_match_struct() {
+        struct Location {
+            x: i32,
+            y: i32,
+        }
+
+        let location = Location { x: 10, y: 20 };
+        match location {
+            Location { x, y: 0 } => println!("X is {}, Y is zero", x),
+            Location { x: 0, y } => println!("X is zero, Y is {}", y),
+            Location { x, y } if x == y => println!("X and Y are equal: {}", x),
+            Location { x, y } => println!("X is {}, Y is {}", x, y),
+        };
     }
 }

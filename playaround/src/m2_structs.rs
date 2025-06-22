@@ -1,28 +1,28 @@
-#[derive(Debug)]
-pub struct User {
-    username: String,
-    email: String,
-    active: bool,
-    sign_in_count: u32,
-}
-
-impl User {
-    fn increment_sign_in_count(&mut self) {
-        self.sign_in_count += 1;
-    }
-
-    fn change_email(&mut self, new_email: &str) {
-        self.email = String::from(new_email);
-    }
-}
-
-fn change_username(user: &mut User, new_username: &str) {
-    user.username = String::from(new_username);
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
+    
+    #[derive(Debug)]
+    pub struct User {
+        username: String,
+        email: String,
+        active: bool,
+        sign_in_count: u32,
+    }
+
+    impl User {
+        fn increment_sign_in_count(&mut self) {
+            self.sign_in_count += 1;
+        }
+
+        fn change_email(&mut self, new_email: &str) {
+            self.email = String::from(new_email);
+        }
+    }
+
+    fn change_username(user: &mut User, new_username: &str) {
+        user.username = String::from(new_username);
+    }
 
     #[test]
     fn test_structs() {
