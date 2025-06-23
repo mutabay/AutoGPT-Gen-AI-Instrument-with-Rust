@@ -1,0 +1,1 @@
+C:\Users\bayram\Desktop\Training\Rust\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\web_template.exe: C:\Users\bayram\Desktop\Training\Rust\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\src\main.rs

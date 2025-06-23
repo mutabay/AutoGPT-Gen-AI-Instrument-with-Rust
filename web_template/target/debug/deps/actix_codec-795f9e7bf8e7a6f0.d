@@ -1,0 +1,10 @@
+C:\Users\bayram\Desktop\Training\Rust\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\deps\libactix_codec-795f9e7bf8e7a6f0.rmeta: C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lib.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\bcodec.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\framed.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lines.rs
+
+C:\Users\bayram\Desktop\Training\Rust\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\deps\libactix_codec-795f9e7bf8e7a6f0.rlib: C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lib.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\bcodec.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\framed.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lines.rs
+
+C:\Users\bayram\Desktop\Training\Rust\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\deps\actix_codec-795f9e7bf8e7a6f0.d: C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lib.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\bcodec.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\framed.rs C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lines.rs
+
+C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lib.rs:
+C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\bcodec.rs:
+C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\framed.rs:
+C:\Users\bayram\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-codec-0.5.2\src\lines.rs:
