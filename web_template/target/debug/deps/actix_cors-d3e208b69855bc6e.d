@@ -1,0 +1,10 @@
+C:\Users\Mutabay\OneDrive\Desktop\Repository\AutoGPT\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\deps\libactix_cors-d3e208b69855bc6e.rmeta: C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\lib.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\all_or_some.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\builder.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\error.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\inner.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\middleware.rs
+
+C:\Users\Mutabay\OneDrive\Desktop\Repository\AutoGPT\AutoGPT-Gen-AI-Instrument-with-Rust\web_template\target\debug\deps\actix_cors-d3e208b69855bc6e.d: C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\lib.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\all_or_some.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\builder.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\error.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\inner.rs C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\middleware.rs
+
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\lib.rs:
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\all_or_some.rs:
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\builder.rs:
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\error.rs:
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\inner.rs:
+C:\Users\Mutabay\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\actix-cors-0.6.5\src\middleware.rs:
