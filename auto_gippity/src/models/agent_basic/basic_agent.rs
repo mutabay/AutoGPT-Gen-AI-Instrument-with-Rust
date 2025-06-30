@@ -4,7 +4,7 @@ use crate::models::agent_basic::basic_traits::BasicTraits;
 #[derive(Debug, PartialEq)]
 pub enum AgentState {
     Discovery,
-    working,
+    Working,
     UnitTesting,
     Finished
 }

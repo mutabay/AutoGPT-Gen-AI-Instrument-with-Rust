@@ -12,10 +12,10 @@ pub struct RouteObject {
     pub route: String,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq)]
 pub struct ProjectScope {
     pub is_crud_required: bool,
-    pub is_user_login_and_logout_required: bool,
+    pub is_user_login_and_logout: bool,
     pub is_external_urls_required: bool,
 }
 
