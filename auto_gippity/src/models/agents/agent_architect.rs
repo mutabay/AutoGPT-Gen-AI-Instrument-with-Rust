@@ -6,7 +6,11 @@ use crate::models::agent_basic::basic_traits::BasicTraits;
 use crate::models::agents::agent_traits::{FactSheet, ProjectScope, SpecialFunctions};
 
 use async_trait::async_trait;
+<<<<<<< HEAD
 use reqwest::{Client, StatusCode};
+=======
+use reqwest::Client;
+>>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 use std::fmt::format;
 use std::time::Duration;
 
@@ -65,6 +69,7 @@ impl AgentSolutionArchitect {
     }
 }
 
+<<<<<<< HEAD
 
 #[async_trait]
 impl SpecialFunctions for AgentSolutionArchitect {
@@ -165,3 +170,5 @@ mod tests {
         dbg!(factsheet);
     }
 }
+=======
+>>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1

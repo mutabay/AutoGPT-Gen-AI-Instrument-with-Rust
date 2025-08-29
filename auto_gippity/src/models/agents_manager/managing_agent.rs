@@ -1,16 +1,22 @@
 use crate::models::agent_basic::basic_agent::{AgentState, BasicAgent};
+<<<<<<< HEAD
 use crate::models::agents::agent_traits::{FactSheet, ProjectScope, SpecialFunctions};
 
 use crate::ai_functions::ai_func_managing::convert_user_input_to_goal;
 use crate::helpers::general::{ai_task_request, ai_task_request_decoded};
 use crate::models::agents::agent_architect::AgentSolutionArchitect;
 use crate::models::general::llm::Message;
+=======
+use crate::models::agents::agent_traits::{FactSheet, SpecialFunctions};
+
+>>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 
 #[derive(Debug)]
 pub struct ManagingAgent {
     attributes: BasicAgent,
     factsheet: FactSheet,
     agents: Vec<Box<dyn SpecialFunctions>>,
+<<<<<<< HEAD
 }
 
 impl ManagingAgent {
@@ -89,4 +95,6 @@ mod tests {
 
         dbg!(managing_agent.factsheet);
     }
+=======
+>>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 }
