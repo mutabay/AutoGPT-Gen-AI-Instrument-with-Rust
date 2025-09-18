@@ -5,17 +5,13 @@ use reqwest::Client;
 use serde::de::DeserializeOwned;
 use std::fs;
 
-
-const CODE_TEMPLATE_PATH: &str =
-    "web_template/src/code_template.rs";
+const CODE_TEMPLATE_PATH: &str = "web_template/src/code_template.rs";
 
 pub const WEB_SERVER_PROJECT_PATH: &str = "web_template";
 
-pub const EXEC_MAIN_PATH: &str =
-    "web_template/src/main.rs";
+pub const EXEC_MAIN_PATH: &str = "web_template/src/main.rs";
 
-const API_SCHEMA_PATH: &str =
-    "auto_gippity/schemas/api_schema.json";
+const API_SCHEMA_PATH: &str = "auto_gippity/schemas/api_schema.json";
 
 // Extend ai function to encourage specific output
 pub fn extend_ai_function(ai_func: fn(&str) -> &'static str, func_input: &str) -> Message {

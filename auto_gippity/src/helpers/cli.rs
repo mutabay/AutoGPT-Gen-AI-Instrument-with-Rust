@@ -57,8 +57,6 @@ pub fn get_user_response(question: &str) -> String {
     return user_response.trim().to_string();
 }
 
-<<<<<<< HEAD
-
 // Get user response that code is safe to execute
 pub fn confirm_safe_code() -> bool {
     let mut stdout: std::io::Stdout = stdout();
@@ -101,9 +99,6 @@ pub fn confirm_safe_code() -> bool {
     }
 }
 
-
-=======
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 #[cfg(test)]
 mod tests {
 
@@ -111,8 +106,6 @@ mod tests {
 
     #[test]
     fn test_print_agent_message() {
-        PrintCommand::AICall
-            .print_agent_message("Managing Agent", "This is a test statement.");
+        PrintCommand::AICall.print_agent_message("Managing Agent", "This is a test statement.");
     }
-
 }

@@ -1,22 +1,17 @@
 use crate::models::agent_basic::basic_agent::{AgentState, BasicAgent};
-<<<<<<< HEAD
 use crate::models::agents::agent_traits::{FactSheet, ProjectScope, SpecialFunctions};
 
 use crate::ai_functions::ai_func_managing::convert_user_input_to_goal;
 use crate::helpers::general::{ai_task_request, ai_task_request_decoded};
 use crate::models::agents::agent_architect::AgentSolutionArchitect;
+use crate::models::agents::agent_backend::AgentBackendDeveloper;
 use crate::models::general::llm::Message;
-=======
-use crate::models::agents::agent_traits::{FactSheet, SpecialFunctions};
-
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 
 #[derive(Debug)]
 pub struct ManagingAgent {
     attributes: BasicAgent,
     factsheet: FactSheet,
     agents: Vec<Box<dyn SpecialFunctions>>,
-<<<<<<< HEAD
 }
 
 impl ManagingAgent {
@@ -61,7 +56,8 @@ impl ManagingAgent {
 
     fn create_agents(&mut self) {
         self.add_agent(Box::new(AgentSolutionArchitect::new()));
-        // ! TODO ADD BACKEND AGENT
+        self.add_agent(Box::new(AgentBackendDeveloper::new()));
+
     }
 
     pub async fn execute_project(&mut self) {
@@ -71,13 +67,11 @@ impl ManagingAgent {
             let agent_res: Result<(), Box<dyn std::error::Error>> =
                 agent.execute(&mut self.factsheet).await;
 
-                let agent_info = agent.get_attributes_from_agent();
-                dbg!(agent_info);
+            // let agent_info = agent.get_attributes_from_agent();
+            // dbg!(agent_info);
         }
     }
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -87,14 +81,13 @@ mod tests {
 
     #[tokio::test]
     async fn test_managing_agent() {
-        let usr_request: &str = 
-        "Need a full stack app that fetches and tracks my fitness progress. Needs to include timezone info from the web.";
-        let mut managing_agent: ManagingAgent = ManagingAgent::new(usr_request.to_string()).await.expect("Error creating Managing Agent");
+        let usr_request: &str = "Need a full stack app that fetches and tracks my fitness progress. Needs to include timezone info from the web.";
+        let mut managing_agent: ManagingAgent = ManagingAgent::new(usr_request.to_string())
+            .await
+            .expect("Error creating Managing Agent");
 
         managing_agent.execute_project().await;
 
         dbg!(managing_agent.factsheet);
     }
-=======
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
 }

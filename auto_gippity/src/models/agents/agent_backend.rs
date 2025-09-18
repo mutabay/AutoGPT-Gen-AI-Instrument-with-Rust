@@ -317,7 +317,6 @@ impl SpecialFunctions for AgentBackendDeveloper {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -6,12 +6,7 @@ use crate::models::agent_basic::basic_traits::BasicTraits;
 use crate::models::agents::agent_traits::{FactSheet, ProjectScope, SpecialFunctions};
 
 use async_trait::async_trait;
-<<<<<<< HEAD
-use reqwest::{Client, StatusCode};
-=======
 use reqwest::Client;
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
-use std::fmt::format;
 use std::time::Duration;
 
 // Solutions Architect
@@ -26,8 +21,8 @@ impl AgentSolutionArchitect {
             objective: "Gathers information and design solutions for website development"
                 .to_string(),
             position: "Solutions Architect".to_string(),
-            memory: vec![],
             state: AgentState::Discovery,
+            memory: vec![],
         };
 
         Self { attributes }
@@ -69,26 +64,30 @@ impl AgentSolutionArchitect {
     }
 }
 
-<<<<<<< HEAD
-
 #[async_trait]
 impl SpecialFunctions for AgentSolutionArchitect {
-
     fn get_attributes_from_agent(&self) -> &BasicAgent {
         &self.attributes
     }
 
-    async fn execute(&mut self, factsheet: &mut FactSheet) -> Result<(), Box<dyn std::error::Error>> {
-        
+    async fn execute(
+        &mut self,
+        factsheet: &mut FactSheet,
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        // !!! WARNING - BE CAREFUL OF INFINITATE LOOPS !!!
         while self.attributes.state != AgentState::Finished {
             match self.attributes.state {
                 AgentState::Discovery => {
-                    let project_scope = self.call_project_scope(factsheet).await;
+                    let project_scope: ProjectScope = self.call_project_scope(factsheet).await;
 
                     // Confirm if external urls
-                    if project_scope.is_external_urls_required{
-                        self.call_determine_external_urls(factsheet, factsheet.project_description.clone()).await;
-                        self.attributes.state = AgentState::UnitTesting
+                    if project_scope.is_external_urls_required {
+                        self.call_determine_external_urls(
+                            factsheet,
+                            factsheet.project_description.clone(),
+                        )
+                        .await;
+                        self.attributes.state = AgentState::UnitTesting;
                     }
                 }
 
@@ -102,24 +101,28 @@ impl SpecialFunctions for AgentSolutionArchitect {
 
                     // Defining urls to check
                     let urls: &Vec<String> = factsheet
-                        .external_urls.as_ref().expect("No URL object on factsheet");
-                    
+                        .external_urls
+                        .as_ref()
+                        .expect("No URL object on factsheet");
+
                     // Find faulty urls
-                    for url in urls{
+                    for url in urls {
                         let endpoint_str: String = format!("Testing URL Endpoint: {}", url);
                         PrintCommand::UnitTest.print_agent_message(
-                            self.attributes.position.as_str(), endpoint_str.as_str());
+                            self.attributes.position.as_str(),
+                            endpoint_str.as_str(),
+                        );
 
                         // Perform URL Test
                         match check_status_code(&client, url).await {
                             Ok(status_code) => {
                                 if status_code != 200 {
-                                    exclude_urls.push(url.clone());
+                                    exclude_urls.push(url.clone())
                                 }
                             }
-                            Err(e) => println!("Error checking {}: {}", url, e)
+                            Err(e) => println!("Error checking {}: {}", url, e),
                         }
-                    };
+                    }
 
                     // Exclude any faulty urls
                     if exclude_urls.len() > 0 {
@@ -131,44 +134,47 @@ impl SpecialFunctions for AgentSolutionArchitect {
                             .filter(|url| !exclude_urls.contains(&url))
                             .cloned()
                             .collect();
-
                         factsheet.external_urls = Some(new_urls);
                     }
 
                     // Confirm done
-                    self.attributes.state = AgentState::Finished
+                    self.attributes.state = AgentState::Finished;
                 }
 
-                // Default to Finished State
+                // Default to Finished state
                 _ => {
                     self.attributes.state = AgentState::Finished;
                 }
             }
         }
+
         Ok(())
     }
-    
 }
-
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[tokio::test]
-    async fn test_solution_architect() {
+    async fn tests_solution_architect() {
         let mut agent: AgentSolutionArchitect = AgentSolutionArchitect::new();
 
-        let mut factsheet: FactSheet = FactSheet { 
-            project_description: "Build a full stack website with user login and logout that shows latest Forex prices".to_string(),
-            project_scope: None, external_urls: None, backend_code: None, api_endpoint_schema: None };
-        
-        agent.execute(&mut factsheet).await.expect("Unable to execute Solution Architect Agent");
+        let mut factsheet: FactSheet = FactSheet {
+      project_description: "Build a full stack website with user login and logout that shows latest Forex prices".to_string(),
+      project_scope: None,
+      external_urls: None,
+      backend_code: None,
+      api_endpoint_schema: None,
+    };
+
+        agent
+            .execute(&mut factsheet)
+            .await
+            .expect("Unable to execute Solutions Architect Agent");
         assert!(factsheet.project_scope != None);
         assert!(factsheet.external_urls.is_some());
-        dbg!(agent);
+
         dbg!(factsheet);
     }
 }
-=======
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1

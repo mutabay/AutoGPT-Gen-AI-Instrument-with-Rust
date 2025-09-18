@@ -12,17 +12,10 @@ pub struct RouteObject {
     pub route: String,
 }
 
-<<<<<<< HEAD
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq)]
 pub struct ProjectScope {
     pub is_crud_required: bool,
     pub is_user_login_and_logout: bool,
-=======
-#[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq)]
-pub struct ProjectScope {
-    pub is_crud_required: bool,
-    pub is_user_login_and_logout_required: bool,
->>>>>>> 4651e6cd4c0bb3225eeaad867c77e2d6d82118b1
     pub is_external_urls_required: bool,
 }
 
@@ -37,11 +30,12 @@ pub struct FactSheet {
 
 #[async_trait]
 pub trait SpecialFunctions: Debug {
-    
     // Used to that manager can get attributes from agents
     fn get_attributes_from_agent(&self) -> &BasicAgent;
 
     // Allow agents to execute their specific tasks
-    async fn execute(&mut self, factsheet: &mut FactSheet) -> Result<(), Box<dyn std::error::Error>>;
-
+    async fn execute(
+        &mut self,
+        factsheet: &mut FactSheet,
+    ) -> Result<(), Box<dyn std::error::Error>>;
 }

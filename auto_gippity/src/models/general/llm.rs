@@ -1,9 +1,9 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Clone)]
 pub struct Message {
     pub role: String,
-    pub content: String
+    pub content: String,
 }
 
 #[derive(Debug, Serialize, Clone)]
@@ -27,4 +27,3 @@ pub struct APIChoice {
 pub struct APIResponse {
     pub choices: Vec<APIChoice>,
 }
-
