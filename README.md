@@ -59,7 +59,7 @@ Give it a prompt like "Build a fitness app with timezone support" and it will:
 - Add external API integrations
 - Generate CRUD operations
 - Include user authentication (if needed)
-- 
+  
 ## Features
 
 - **AutoGPT-like agent orchestration** with modular, extensible Rust code.
