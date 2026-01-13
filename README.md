@@ -3,9 +3,9 @@
 Course repository for "Craft an AutoGPT Gen AI Instrument with Rust & GPT-4 Specialization"
 
 ## What's This?
-This is a hands-on learning project that teaches you how to build AI-powered applications with Rust. You'll create an AutoGPT-like system that can generate web applications using GPT-4.
+This is a hands-on learning project that teaches how to build AI-powered applications with Rust. An AutoGPT-like system that can generate web applications using GPT-4 has been created.
 
-## What You'll Learn
+## What has been learned
 
 - **Rust fundamentals**: Ownership, traits, async programming, macros
 - **AI integration**: Working with OpenAI's GPT-4 API
